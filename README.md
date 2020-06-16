@@ -31,14 +31,16 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
 I have used Windows as the slave but docker would be the efficient client as it is dynamic and faster .
 So some commands of Windows which i have used are:
 
-       --------------------------------------------------
-       |   COMMAND    |       DESCRIPTION                |
-       | ------------ | --------------------------       | 
-       | cd <path>    |    to change the directory       |
-       | %variable%   |    to print the value of variable|
-       |  rmdir /Q /S |    to forcefully remove the      |
-       | <path/to/dir>|             non empty directory  |
-       |--------------|----------------------------------|
+       
+       
+      
+   |   COMMAND    |       DESCRIPTION                |
+   | ------------ | --------------------------       | 
+   | cd <path>    |    to change the directory       |
+   | %variable%   |    to print the value of variable|
+   |  rmdir /Q /S |    to forcefully remove the      |
+   | <path/to/dir>|             non empty directory  |
+ 
               
        
        
