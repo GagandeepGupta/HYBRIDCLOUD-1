@@ -68,18 +68,22 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
           
                                         WINDOWS AS THE JENKINS SLAVE 
                                         
-   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/validate-which-build.PNG" />
+   
+   
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />                                    
+ 
      
                                      GIT POST COMMIT HOOK - REMOTE TRIGGER FOR JENKINS INITIAL JOB
                                      
+  
+  <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/validate-which-build.PNG" />
+  
     
+                                             FIRST  JOB WHICH IS TO BE TRIGGERED BY POST COMMIT HOOK
+                                             
+                                             
+                                             
    <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/initail_pull_job-2.PNG" />
-    
-                                             FIRST  JOB TRIGGERED BY POST COMMIT HOOK
-                                             
-                                             
-                                             
-   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />   
    
                                               GITHUB FIRST PULL - TERRAFORM INIT AND APPLY
                                               
