@@ -99,7 +99,7 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
 ### INITIAL SITE
 
 
-<img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/s3_update_job-2.PNG" />
+<img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/site-1.PNG" />
 
 
 
@@ -120,7 +120,7 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
 ### AFTER SECOND COMMIT
 
 
-<img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/s3_update_job-2.PNG" />
+<img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/site-2.PNG" />
 
 
 
