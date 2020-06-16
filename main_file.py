@@ -6,27 +6,21 @@ def get_var_value(filename="value_counts.txt"):
         f.seek(0)
         val = int(f.read()) + 1
         f.seek(0)
-    
         f.write(str(val))
         return val
-url=sys.argv[1]
+    
+url=sys.argv[1]    // this argument i am passing through the s3.tf file
 content_type=os.path.basename(url)
 content_type=os.path.splitext(content_type)[1]
-#job_name=sys.argv[]
-#initial_path=os.path.join(r"C:\Users\Raghav Gupta\Desktop\FUTURE READY KNOWLEDGE\Cloud\TERRAFORM\teraws\tera-test\newone\workspace" ,job_name)
-#files=os.listdir(r"{0}".format(initial_path))
-#print(files)
-
 count=get_var_value()
-print(count)
+
 if count==1:
-    web_initial_path=r"C:\Users\Raghav Gupta\Desktop\FUTURE READY KNOWLEDGE\Cloud\TERRAFORM\teraws\tera-test\newone\workspace\github_initial_pull"
-    web_files=os.listdir(r"C:\Users\Raghav Gupta\Desktop\FUTURE READY KNOWLEDGE\Cloud\TERRAFORM\teraws\tera-test\newone\workspace\github_initial_pull")
+    web_initial_path="remote_workspace_for_jenkins_slave/job1"
+    web_files=os.listdir(web_initial_path)
 
 else:
-    web_initial_path=r"C:\Users\Raghav Gupta\Desktop\FUTURE READY KNOWLEDGE\Cloud\TERRAFORM\teraws\tera-test\newone\workspace\s3-bucket"
-    web_files=os.listdir(r"C:\Users\Raghav Gupta\Desktop\FUTURE READY KNOWLEDGE\Cloud\TERRAFORM\teraws\tera-test\newone\workspace\s3-bucket") 
-
+    web_initial_path="remote_workspace_for_jenkins_slave/job2"
+    web_files=os.listdir(web_initial_path)
 web_need=[ file for  file  in web_files if (os.path.splitext(file)[1].lower() in [".html",".js",".php"])]
 web_actual_path=os.path.join(web_initial_path,web_need[0])
 web_li=f'source="{web_actual_path}" '
@@ -37,7 +31,7 @@ print(web_li)
 with FileInput(web_actual_path,inplace=True) as ip:
     for line in ip:
         if "<img src" in line or content_type in line :
-            str=f'<img src ="{url}" class="img-fluid" alt="Responsive image">  '
+            str=f'<img src ="{url}" class="img-fluid" alt="Responsive image">  '   // changing the image_url
             print(line.replace(line,str))
         else:
              print(line.strip())
@@ -50,7 +44,7 @@ web_li_target=f'destination="{target_actual_path}" '
 web_li_target=web_li_target.replace("\\","/")
 print(web_li_target)
 
-st=f'''resource "null_resource" "site"[
+st=f'''resource "null_resource" "site"[       //creating the index.tf file
 
 connection [
     type     = "ssh"
@@ -69,7 +63,7 @@ provisioner "file"[
 
 st=st.replace("[","{")
 st=st.replace("]","}")
-print(st)
+
 
 file=os.path.splitext(web_need[0])[0]+".tf"
 with open(file,"w") as fp:
