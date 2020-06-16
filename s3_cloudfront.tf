@@ -57,7 +57,7 @@ identifiers = [  aws_cloudfront_origin_access_identity.origin_access_identity.ia
 }
 }
 
-/adding_the_policy
+//adding_the_policy
 
 resource "aws_s3_bucket_policy" "policy" {
 depends_on=[aws_s3_bucket_object.object]
