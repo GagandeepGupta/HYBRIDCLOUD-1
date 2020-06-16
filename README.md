@@ -34,7 +34,9 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
 ## TASK DESCRIPTION:
   ### Create the key and security group which allow the port 80.
   
-         REFER THIS :![](test.tf)
+  
+  
+   REFER THIS :![](test.tf)
   
   
    
