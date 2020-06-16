@@ -1,10 +1,11 @@
 //provider
+
 provider "aws"{
 region="ap-south-1"
 profile="tera-user"
 }
 
-
+//variables
 
 variable "github_repo_url"{
 
@@ -121,7 +122,7 @@ resource "aws_instance" "my_instance" {
         Name = "Myinstance"}
    }
 
-//aws_ebs_and_snapshot
+//aws_ebs
 
 resource "aws_ebs_volume" "my_vol" {
 depends_on=[aws_instance.my_instance]
@@ -133,15 +134,7 @@ depends_on=[aws_instance.my_instance]
   }
 }
 
-/*resource "aws_ebs_snapshot" "my_vol_snap" {
-depends_on=[aws_volume_attachment.ebs_att]
-  volume_id = aws_ebs_volume.my_vol.id
 
-  tags = {
-    Name = "MY_volume_snap"
-  }
-}
-*/
 
 //installing_and-conf_httpd
 
