@@ -68,7 +68,7 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
           
                                         WINDOWS AS THE JENKINS SLAVE 
                                         
-   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/validate-which-build.PNG" />
      
                                      GIT POST COMMIT HOOK - REMOTE TRIGGER FOR JENKINS INITIAL JOB
                                      
