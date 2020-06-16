@@ -1,6 +1,4 @@
-// variables
-
-
+// variable
 
 variable "bucket_name"{
 default="raghav1674"
@@ -9,7 +7,7 @@ default="raghav1674"
 //s3 bucket
 
 
-resource "aws_s3_bucket" "b" {
+resource "aws_s3_bucket" "my_bucket" {
 depends_on=[aws_instance.my_instance]
 bucket = var.bucket_name
 acl    = "private"
@@ -23,93 +21,50 @@ Environment = "Dev"
 //aws_s3_bucket_object
 
 resource "aws_s3_bucket_object" "object" {
-depends_on=[aws_s3_bucket.b]
+depends_on=[aws_s3_bucket.my_bucket]
 bucket = var.bucket_name
 key    = "workflow.PNG"
-source="C:/Users/Raghav Gupta/Desktop/FUTURE READY KNOWLEDGE/Cloud/TERRAFORM/teraws/tera-test/newone/workspace/s3-bucket/Vimal.png"
-
-
-
-
-
-
-
-
-
-
-
-
+source="path/to/file/to/upload"    // i am using a  python script ![](change.py) for updating this
 content_type ="image/png"
-//  etag = filemd5("C:/Users/Raghav Gupta/Desktop/FUTURE READY KNOWLEDGE/MLOPsProject/mlops/mlops great/train.PNG")
+
 }
-//blocking_access
+
+//blocking_public_access
+
 resource "aws_s3_account_public_access_block" "access" {
 depends_on=[aws_s3_bucket_object.object]
 block_public_acls   = true
 block_public_policy = true
 }
 
-
-
-
-
-
-
 //cloudfront_OAI
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
-
-
-
 depends_on=[aws_s3_bucket_object.object]
-
-
-
 comment = "comments"
-
-
-
 }
 
-
-
-// Updating the policy
-
-
-
+// updating_the_policy
 
 data "aws_iam_policy_document" "s3_policy" {
 statement {
 actions   = ["s3:GetObject"]
-resources = ["${aws_s3_bucket.b.arn}/*"]
+resources = ["${aws_s3_bucket.my_bucket.arn}/*"]
 principals {
 type        = "AWS"
 identifiers = [  aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn ]
 }
 }
-
-/*  statement {
-actions   = ["s3:ListBucket"]
-resources = [aws_s3_bucket.b.arn]
-principals {
-
-type        = "AWS"
-identifiers = [ aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn]
 }
 
-
-
-}
-
-*/
-
-}
+/adding_the_policy
 
 resource "aws_s3_bucket_policy" "policy" {
 depends_on=[aws_s3_bucket_object.object]
-bucket = aws_s3_bucket.b.id
+bucket = aws_s3_bucket.my_bucket.id
 policy = data.aws_iam_policy_document.s3_policy.json
 }
+
 //cloudfront_distribution
 
 locals {
@@ -119,7 +74,7 @@ s3_origin_id = "myS3Origin"
 resource "aws_cloudfront_distribution" "s3_distribution" {
 depends_on=[aws_s3_bucket_object.object]
 origin {
-domain_name = aws_s3_bucket.b.bucket_regional_domain_name
+domain_name = aws_s3_bucket.my_bucket.bucket_regional_domain_name
 origin_id   = local.s3_origin_id
 s3_origin_config {
 origin_access_identity = aws_cloudfront_origin_access_identity.origin_access_identity.cloudfront_access_identity_path
@@ -168,17 +123,24 @@ value=aws_cloudfront_distribution.s3_distribution.domain_name
 
 
 
-
-
-//adding_the_url
-
-//finally_deployed
+//altering_the_url_for_image_and_then_uploading_to_instance
 
 resource "null_resource" "give_url"{
 depends_on=[aws_cloudfront_distribution.s3_distribution,null_resource.mount_copy]
 provisioner "local-exec" {
 command= "python   main_file.py  https://${aws_cloudfront_distribution.s3_distribution.domain_name}/${aws_s3_bucket_object.object.key}"
 }
+}
+
+//creating snapshot
+
+resource "aws_ebs_snapshot" "my_vol_snap" {
+depends_on=[aws_volume_attachment.ebs_att,null_resource.give_url]
+  volume_id = aws_ebs_volume.my_vol.id
+
+  tags = {
+    Name = "MY_volume_snap"
+  }
 }
 
 
