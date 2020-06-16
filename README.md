@@ -17,3 +17,11 @@ Most users will store their configuration files in a version control system (VCS
 When you push changes to a connected VCS repository, Terraform Cloud will automatically trigger a plan in any workspace connected to that repository. This plan can be reviewed for safety and accuracy in the Terraform UI, then it can be applied to provision the specified infrastructure.
 
 <img src="https://www.terraform.io/assets/images/terraform-overview/cli-howitworks-2x-0b1a3eb0.png" />
+
+
+
+## INTEGRATING GITHUB JENKINS AWS WITH TERRAFORM
+
+
+
+<img src="https://www.terraform.io/assets/images/terraform-overview/cli-howitworks-2x-0b1a3eb0.png" />
