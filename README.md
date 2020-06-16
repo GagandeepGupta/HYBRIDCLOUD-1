@@ -28,8 +28,8 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
 
 
 
-I have used Windows as the slave but docker would be the efficient client as it is dynamic and faster .
-So some commands of Windows which i have used are:
+I have used Windows as the slave but docker would be the efficient slave as it is dynamic and faster .
+So some commands of Windows which i have used which are as under:
 
        
        
@@ -39,6 +39,8 @@ So some commands of Windows which i have used are:
    | cd <path>    |    to change the directory       |
    | %variable%   |    to print the value of variable|
    |  rmdir /Q /S <path/to/dir>|    to forcefully remove the non-empty directory|
+   |  echo <something> |   to print anything         |
+   |   >              |       output redirection operator |
 
               
        
