@@ -64,9 +64,32 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
  
  #### 8. Those who are familiar with jenkins or are in devops AL have to integrate jenkins in this task wherever you feel can be integrated
           
-          
-
    <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />
+          
+                                        WINDOWS AS THE JENKINS SLAVE 
+                                        
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />
+     
+                                     GIT POST COMMIT HOOK - REMOTE TRIGGER FOR JENKINS INITIAL JOB
+                                     
+    
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />
+    
+                                             FIRST  JOB TRIGGERED BY POST COMMIT HOOK
+                                             
+                                             
+                                             
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />   
+   
+                                              GITHUB FIRST PULL - TERRAFORM INIT AND APPLY
+                                              
+                                              
+                                              
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />
+   
+                                              JOB FOR UPDATING THE IMAGES AND CODE
+                   
+                                     
 
 
 
