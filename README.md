@@ -50,6 +50,7 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
    ####     Copy the github repo code into /var/www/html
    ####     Create S3 bucket, and copy/deploy the images from github repo into the s3 bucket and change the permission to public 
    ####     Create a Cloudfront using s3 bucket(which contains images) and use the Cloudfront URL to update in code in /var/www/html
+   ####     Create snapshot of ebs
    
    
   [PYTHON SCRIPT](https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/main_file.py "detecting the webpage and creatng index.tf")
@@ -61,3 +62,11 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
   [TERRAFORM CODE](https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/index.tf)
    
  
+ #### 3. Those who are familiar with jenkins or are in devops AL have to integrate jenkins in this task wherever you feel can be integrated
+          
+          
+
+
+
+
+
