@@ -88,7 +88,7 @@ So some commands of Windows which i have used  are as under:
    
   [PYTHON SCRIPT](https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/main_file.py "detecting the webpage and creatng index.tf")
   
-  [TERRAFORM CODE](https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/s3.tf "S3 and cloudfront")
+  [TERRAFORM CODE](https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/s3_cloudfront.tf "S3 and cloudfront")
   
   [PYTHON SCRIPT](https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/change.py "changing image_url dynamically")
    
