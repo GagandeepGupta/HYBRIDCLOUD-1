@@ -73,7 +73,7 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
                                      GIT POST COMMIT HOOK - REMOTE TRIGGER FOR JENKINS INITIAL JOB
                                      
     
-   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/initail_pull_job-2.PNG" />
     
                                              FIRST  JOB TRIGGERED BY POST COMMIT HOOK
                                              
