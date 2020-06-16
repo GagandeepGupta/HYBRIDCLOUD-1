@@ -24,7 +24,7 @@ resource "aws_s3_bucket_object" "object" {
 depends_on=[aws_s3_bucket.my_bucket]
 bucket = var.bucket_name
 key    = "workflow.PNG"
-source="path/to/file/to/upload"    // i am using a  python script ![](change.py) for updating this
+source="path/to/file/to/upload"    // i am using a  python script !(update_source.py) for updating this
 content_type ="image/png"
 
 }
