@@ -9,7 +9,7 @@ def get_var_value(filename="value_counts.txt"):
         f.write(str(val))
         return val
     
-url=sys.argv[1]    // this argument i am passing through the s3.tf file
+url=sys.argv[1]    # this argument i am passing through the s3.tf file
 content_type=os.path.basename(url)
 content_type=os.path.splitext(content_type)[1]
 count=get_var_value()
@@ -31,7 +31,7 @@ print(web_li)
 with FileInput(web_actual_path,inplace=True) as ip:
     for line in ip:
         if "<img src" in line or content_type in line :
-            str=f'<img src ="{url}" class="img-fluid" alt="Responsive image">  '   // changing the image_url
+            str=f'<img src ="{url}" class="img-fluid" alt="Responsive image">  '   # changing the image_url
             print(line.replace(line,str))
         else:
              print(line.strip())
@@ -44,7 +44,7 @@ web_li_target=f'destination="{target_actual_path}" '
 web_li_target=web_li_target.replace("\\","/")
 print(web_li_target)
 
-st=f'''resource "null_resource" "site"[       //creating the index.tf file
+st=f'''resource "null_resource" "site"[       # creating the index.tf file
 
 connection [
     type     = "ssh"
