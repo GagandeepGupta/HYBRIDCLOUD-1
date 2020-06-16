@@ -64,7 +64,7 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
  
  #### 8. Those who are familiar with jenkins or are in devops AL have to integrate jenkins in this task wherever you feel can be integrated
           
-   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/jenkins-static-slave.PNG" />
           
                                         WINDOWS AS THE JENKINS SLAVE 
                                         
