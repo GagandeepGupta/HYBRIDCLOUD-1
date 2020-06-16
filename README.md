@@ -106,13 +106,13 @@ So some commands of Windows which i have used  are as under:
    <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />                                    
  
      
-                                     GIT POST COMMIT HOOK - REMOTE TRIGGER FOR JENKINS INITIAL JOB
+                                     GIT POST COMMIT HOOK - REMOTE TRIGGER FOR JENKINS INITIAL JOB 
                                      
   
   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/validate-which-build.PNG" />
   
     
-                                             FIRST  JOB WHICH IS TO BE TRIGGERED BY POST COMMIT HOOK
+     FIRST  JOB WHICH IS TO BE TRIGGERED BY POST COMMIT HOOK AND IS EXCUTED WHERE JENKINS SERVER IS RUNNING inmy case RHEL8
                                              
                                              
                                              
