@@ -1,3 +1,7 @@
+
+// this file will be created form the python script(main_file.py) which we have executed in s3_cloudfront.tf file 
+
+
 resource "null_resource" "site"{
 
 connection {
@@ -9,7 +13,7 @@ connection {
 
 provisioner "file"{
 
-source="C:/Users/Raghav Gupta/Desktop/FUTURE READY KNOWLEDGE/Cloud/TERRAFORM/teraws/tera-test/newone/workspace/s3-bucket/index.html" 
+source="path/to/the/website/page"   // this will be updated when the main_file.py will execute
 destination="/var/www/html/index.html" 
 }
 }
