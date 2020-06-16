@@ -48,7 +48,9 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
    ### Copy the github repo code into /var/www/html
    
    
-   REFER THIS :  [](https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/test.tf)
+   
+   
+  ![](https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/test.tf)
 
 ### Create S3 bucket, and copy/deploy the images from github repo into the s3 bucket and change the permission to public readable. 8          Create a Cloudfront using s3 bucket(which contains images) and use the Cloudfront URL to update in code in /var/www/html
 
