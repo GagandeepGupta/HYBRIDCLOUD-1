@@ -36,7 +36,7 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
   
   
   
-   REFER THIS :![](HYBRIDCLOUD-1/test.tf)
+   REFER THIS :  [](HYBRIDCLOUD-1/test.tf)
   
   
    
