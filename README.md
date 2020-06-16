@@ -89,7 +89,7 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
                                               
                                               
                                               
-   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/git-commit-realone.PNG" />
+   <img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/images/s3_update_job-2.PNG" />
    
                                               JOB FOR UPDATING THE IMAGES AND CODE
                    
