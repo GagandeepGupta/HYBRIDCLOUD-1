@@ -38,9 +38,8 @@ So some commands of Windows which i have used are:
    | ------------ | --------------------------       | 
    | cd <path>    |    to change the directory       |
    | %variable%   |    to print the value of variable|
-   |  rmdir /Q /S |    to forcefully remove the      |
-   | <path/to/dir>|             non empty directory  |
- 
+   |  rmdir /Q /S <path/to/dir>|    to forcefully remove the non-empty directory|
+
               
        
        
