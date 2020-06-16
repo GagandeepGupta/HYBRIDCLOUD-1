@@ -24,4 +24,4 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
 
 
 
-<img src="https://www.terraform.io/assets/images/terraform-overview/cli-howitworks-2x-0b1a3eb0.png" />
+<img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/download.png" />
