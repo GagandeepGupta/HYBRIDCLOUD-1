@@ -24,4 +24,4 @@ When you push changes to a connected VCS repository, Terraform Cloud will automa
 
 
 
-<img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/download.png" />
+<img src="https://github.com/raghav1674/HYBRIDCLOUD-1/blob/master/download.png" width="500" height="300" />
